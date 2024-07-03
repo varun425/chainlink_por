@@ -1,4 +1,4 @@
-
+###### Author : Varun Arya
 Key Concepts in Chainlink:
 1) ChainlinkClient: A contract that facilitates interaction with Chainlink nodes.
 2) Oracle: A service that fetches data from off-chain sources and provides it to smart contracts.
