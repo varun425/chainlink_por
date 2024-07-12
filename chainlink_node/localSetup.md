@@ -26,12 +26,12 @@ mkdir ~/.chainlink-sepolia
 ### config.toml
 Create `config.toml` in the `~/.chainlink-sepolia` directory with the following content:
 
-```bash
-echo "[Log]
-Level = 'warn'
+```bash                                                            
+echo [Log]
+Level = 'debug'
 
 [WebServer]
-AllowOrigins = '*'
+AllowOrigins = '\*'
 SecureCookies = false
 
 [WebServer.TLS]
@@ -43,8 +43,8 @@ LinkContractAddress = '0x5e8df0a791232cca30850189a8ee29C651F2d1b0'
 
 [[EVM.Nodes]]
 Name = 'Fantom'
-WSURL = 'https://fantom-testnet-rpc.publicnode.com'
-HTTPURL = 'https://fantom.api.onfinality.io/public'
+WSURL = 'wss://fantom-testnet-rpc.publicnode.com/'
+HTTPURL = 'https://rpc.ankr.com/fantom_testnet/'
 " > ~/.chainlink-sepolia/config.toml
 ```
 
@@ -54,10 +54,12 @@ HTTPURL = 'https://fantom.api.onfinality.io/public'
 Create `secrets.toml` in the `~/.chainlink-sepolia` directory with the following content:
 
 ```bash
-echo "[Password]
-Keystore = 'ea8ff4046991fG@0R!f7P2#d5z*8L1t'
+echo [Password]
+Keystore = 'mypostgresspassword123456'
+
 [Database]
-URL = 'postgresql://postgres:ea8ff4046991fG@0R!f7P2#d5z*8L1t@host.docker.internal:5432/postgres?sslmode=disable'
+URL = 'postgresql://postgres:mypostgresspassword123456@host.docker.internal:5432/postgres?sslmode=disable'
+AllowSimplePasswords = false
 " > ~/.chainlink-sepolia/secrets.toml
 ```
 
