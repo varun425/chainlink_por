@@ -1,9 +1,11 @@
 const express = require("express");
+const cors = require("cors"); // Include CORS middleware
 const app = express();
 const port = 3000;
-let balance =813083240;  /// ------- 120000000 gold 
+let balance = 813083240;  /// ------- 120000000 gold 
 
 // Middleware for logging requests
+app.use(cors()); // Enable CORS for all routes and origins
 app.use(express.json()); // Middleware to parse JSON bodies
 app.use((req, res, next) => {
   console.log(`${req.method} request for '${req.url}'`);

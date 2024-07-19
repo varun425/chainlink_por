@@ -50,7 +50,7 @@ contract GoldVaultChecker is ChainlinkClient, KeeperCompatibleInterface {
             this.fulfill.selector
         );
         req._add("url", "https://c169-160-202-37-240.ngrok-free.app/");
-        req._add("path", "balance");
+        req._add("path", "");
         req._addInt("times", 100000000000000000000);
         _sendChainlinkRequestTo(oracle, req, fee);
     }

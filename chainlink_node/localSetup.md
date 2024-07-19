@@ -43,8 +43,8 @@ LinkContractAddress = '0x5e8df0a791232cca30850189a8ee29C651F2d1b0'
 
 [[EVM.Nodes]]
 Name = 'Fantom'
-WSURL = 'wss://fantom-testnet-rpc.publicnode.com/'
-HTTPURL = 'https://rpc.ankr.com/fantom_testnet/'
+WSURL = 'wss://fantom-testnet.blastapi.io/1160a407-3d88-4776-ae57-c43f31b0a974'
+HTTPURL = 'https://fantom-testnet.blastapi.io/1160a407-3d88-4776-ae57-c43f31b0a974'
 " > ~/.chainlink-sepolia/config.toml
 ```
 
